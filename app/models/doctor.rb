@@ -4,6 +4,7 @@ class Doctor < ActiveRecord::Base
   has_many :patients, through: :appointments
 
   def patient_count
-    doctor.patients.count
+    self.patients.count
   end
+  
 end
