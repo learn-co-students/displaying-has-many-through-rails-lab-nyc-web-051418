@@ -1,0 +1,10 @@
+<!-- Create a Patient#index page that displays a link to each patient's show page and the total number of appointments they have.-->
+
+<h1>Patient Index</h1>
+<ul>
+  <% @patients.each do |patient| %>
+      Name: <%= link_to "#{patient.name}", patient_path(patient) %>
+      Number of Appointments: <%=  patient.appointments.count %></p>
+    <br>
+  <% end %>
+</ul>
